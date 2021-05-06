@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Car Price Predictor</title> 
+    <meta name="author" content="Arjun M S">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/carlogo.svg" type="image/x-icon">
+<link rel="stylesheet"  type="text/css"  href="../static/css/style.css"/>  
+   
+</head>
+
+<body>
+    <div>
+        <h1 class="text-light">Car Price Prediction</h1>
+<div class="btn-group mt-2 mb-4" role="group" aria-label="actionButtons">
+    <a href="https://codepen-api-export-production.s3.us-west-2.amazonaws.com/zip/PEN/pyBNzX/1578778289271/pure-css-gradient-background-animation.zip" class="d-block btn btn-outline-light" download><i class="fas fa-file-download mr-2"></i>Download Source</a>
+    <a href="https://arjun-ms.github.io" target="_blank" class="d-block btn btn-outline-light">Visit my Website<i class="fas fa-external-link-square-alt ml-2"></i></a>
+</div>
+
+<h6 class="text-light small font-weight-bold"><i class="fas fa-code"></i> with <i class="fas fa-heart"></i> by Arjun M S</h6>
+    
+    
+        <form action="{{ url_for('predict')}}" method="post">
+
+
+            <h3>Enter the Year when your car was purchased</h3>
+            <input id="first" name="Year" type="number ">
+
+            <h3>What is the Showroom Price?(In lakhs)</h3>
+            <input id="second" name="Present_Price" required="required">
+
+            <h3>How Many Kilometers Drived?</h3>
+            <input id="third" name="Kms_Driven" required="required">
+
+            <h3>How much owners previously had the car(0 or 1 or 3) ?</h3>
+            <input id="fourth" name="Owner" required="required">
+
+            <h3>What Is the Fuel type?</h3>
+            <select name="Fuel_Type_Petrol" id="fuel" required="required">
+                <option value="Petrol">Petrol</option>
+                <option value="Diesel">Diesel</option>
+                <option value="CNG">CNG</option>
+            </select>
+
+            <h3>Are you A Dealer or Individual</h3>
+            <select name="Seller_Type_Individual" id="resea" required="required">
+                <option value="Individual">Individual</option>
+                <option value="Dealer">Dealer</option>
+            </select>
+
+            <h3>Transmission type</h3>
+            <select name="Transmission_Mannual" id="research" required="required">
+                <option value="Mannual">Manual Car</option>
+                <option value="Automatic">Automatic Car</option>
+            </select>
+
+            <br><br>
+            <br><br>
+            
+            <button id="sub" type="submit ">Calculate the Selling Price</button>
+            
+        </form>
+
+        <br><br>
+        
+        <h3>{{ prediction_text }}<h3>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
