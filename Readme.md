@@ -22,25 +22,25 @@ What did you learn while building this project? What challenges did you face and
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/arjun-ms/pre-owned.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd my-project
+  cd pre-owned
 ```
 
 Install dependencies
 
 ```bash
-  npm install
+  pip install -r requirements.txt
 ```
 
 Start the server
 
 ```bash
-  npm run start
+  python app.py
 ```
 
 
