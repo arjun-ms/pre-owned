@@ -4,7 +4,7 @@ A web-based application uses machine learning to predict the price of used cars 
 
 ## Screenshots
 
-![App Screenshot](images/Screenshot%2023-07-30%175847.png)
+![App Screenshot](images/pre-owned.png)
 
 
 ## Demo
